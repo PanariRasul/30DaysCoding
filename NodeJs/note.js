@@ -39,3 +39,76 @@ properties:
 - inStock (boolean)
 
 */
+/*
+const product_1 = {
+    "name" : "Laptop",
+    "price" : 85000,
+    "inStock" : true
+}
+
+const product_2 = {
+    "name":"iPhone 16pro",
+    "price":120000,
+    "inStock":false
+}
+
+const product_3 = {
+    "name" : "Realme GT2",
+    "price":35000,
+    "inStock":true
+}
+
+const product_4= {
+    "name":"i pad",
+    "price":40000,
+    "isStaock":true
+}
+
+console.log(product_1);
+console.log(product_2);
+console.log(product_3);
+console.log(product_4);
+
+*/
+
+/*You're organizing a party and want to keep track of the guest list. Create an array called
+"guestList" and add the names of at least five guests. Then, write a program that checks if a
+given name is on the guest list. If the name is found, display "Welcome to the party, [name]!";
+otherwise, display "Sorry, you're not on the guest list."*/
+
+const guestList= ["rasul", "aasif", "reddy", "pruthvi","erappa","shran"];
+
+// console.log (guestList)
+
+
+/*
+var name = prompt("Enter your name : ")
+
+if (guestList.includes(name)){
+    console.log ("Wellcome to Party!!")
+}else {
+    console.log("Sorry!! you are not in the guest list")
+}
+*/
+
+/* You're working on a weather app. Create a JSON object representing the weather forecast for
+a specific day. Include properties like "date," "temperature," "conditions," and "humidity."
+Display the information using console.log.
+*/
+
+const weatherForecast = {
+    "date":"30/Mar/2024",
+    "temperature":"36 deg C", 
+    "conditions":"Sunny",
+    "humidity":"Heigh"
+}
+
+console.log("Today Date :"+ weatherForecast.date);
+console.log("Todays heighest temperature :"+ weatherForecast.temperature);
+console.log("Todays condition is :"+weatherForecast. conditions);
+console.log("Humidity level :"+weatherForecast.humidity);
+
+
+
+
+

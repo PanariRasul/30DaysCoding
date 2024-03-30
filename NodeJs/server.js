@@ -14,6 +14,7 @@ app.get("/education",function(req, res){
 })
 
 app.listen(3000, ()=>{
+    console.log("Hey Iam Back-End side");
     console.log("Server run on port 3000");
 
     
