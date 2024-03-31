@@ -12,7 +12,7 @@ const personSchema = new mongoose.Schema({
 
     work:{
         type:"String",
-        enum:[chef, manager, waiter],
+        enum:['chef', 'manager', 'waiter'],
         require:true
     },
 
@@ -31,9 +31,14 @@ const personSchema = new mongoose.Schema({
     address:{
         type:"String"
     },
-    
+
     salary:{
         type:"String",
         require:true
     }
-})
+});
+
+//create person model
+
+const Person = mongoose.model('Person',personSchema);
+module.export = Person;
