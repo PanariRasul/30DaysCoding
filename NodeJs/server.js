@@ -2,9 +2,10 @@ const express = require('express');
 const app = express();
 const db = require("./db");
 
+
 //import person
 
-const Person = require("./models/person");
+const Person = require ('./models/Person')
 
 // import body-parser
 
@@ -57,8 +58,24 @@ app.post('/person', async (req, res) => {
 
 });
 
+//GET method to get person data
+
+app.get("/person", async (req, res)=>{
+
+    try {
+        const data = await Person.find();
+        console.log("Data fetch successfully!");
+        res.status(200).json(data);
+
+    } catch (err) {
+        
+        console.log(err);
+        res.status(500).json({err:"Internal Error"});
+    }
+})
+
 app.listen(3000, () => {
-    console.log("Hey Iam Back-End side");
+    console.log("Hey Iam from Back-End side");
     console.log("Server run on port 3000");
 
 

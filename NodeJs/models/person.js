@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 
 const personSchema = new mongoose.Schema({
     name:{
-        type:"String",
-        require:true
+        type:String,
+        required:true
     },
 
     age:{
@@ -11,34 +11,34 @@ const personSchema = new mongoose.Schema({
     },
 
     work:{
-        type:"String",
+        type:String,
         enum:['chef', 'manager', 'waiter'],
-        require:true
+        required:true
     },
 
     mobile:{
-        type:Number,
-        require:true
+        type:String,
+        required:true
 
     },
 
     email:{
-        type:"String",
-        require:true,
+        type:String,
+        required:true,
         unique:true
     },
 
     address:{
-        type:"String"
+        type:String
     },
 
     salary:{
-        type:"String",
-        require:true
+        type:String,
+        required:true
     }
 });
 
 //create person model
 
 const Person = mongoose.model('Person',personSchema);
-module.export = Person;
+module.exports = Person;
