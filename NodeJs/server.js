@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 //get method 
 
 app.get('/', function (req, res) {
-    res.send("Hello Iam come from back-end")
+    res.send("WELLCOME TO OUR HOTEL, WE ARE HAPPY TO SERVE YOU!!")
 });
 
 //post method
@@ -70,7 +70,25 @@ app.get("/person", async (req, res) => {
             err: "Internal Error"
         });
     }
-})
+});
+
+//GET method for work type
+
+app.get('/person/:workType', async (req, res)=>{
+    try {
+        const workType = req.params.workType;
+        if (workType == 'chef' || workType == 'manager' || workType == 'waiter') {
+            const response = await Person.find({work:workType})
+            console.log('Work type fetch successfull');
+            res.status(500).json(response);
+        } else {
+            res.status(500).json({error:'Invalid work type'});
+        }
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({error:'Internal error'});
+    }
+});
 
 //POST metod for menu item 
 
@@ -110,7 +128,8 @@ app.get('/menu', async (req, res) => {
     }
 });
 
+//server listen on port 3000
+
 app.listen(3000, () => {
-    console.log("Hey Iam from Back-End side");
     console.log("Server run on port 3000");
 });
