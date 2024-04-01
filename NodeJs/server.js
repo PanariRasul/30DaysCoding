@@ -5,7 +5,11 @@ const db = require("./db");
 
 //import person
 
-const Person = require ('./models/Person')
+const Person = require ('./models/Person');
+
+//import menu item
+
+const menuItem = require('./models/menuItem');
 
 // import body-parser
 
@@ -73,6 +77,51 @@ app.get("/person", async (req, res)=>{
         res.status(500).json({err:"Internal Error"});
     }
 })
+
+//POST metod for menu item 
+
+app.post('/menu', async (req, res )=>{
+
+    try {
+
+        const menuData = req.body;
+
+        // create new menu document using mongoose
+        const newMenu = new menuItem(menuData);
+
+        //save data
+
+        const data = await newMenu.save();
+        console.log("Data saves Successfully into database");
+        res.status(200).json(data);
+
+    } catch (err) {
+        
+        console.log(err);
+        res.status(500).json({err:"Internal Error"});
+
+    }
+
+});
+
+//GET method for menu items
+
+app.get('/menu', async (req, res)=>{
+
+    try {
+        
+        const data = await menuItem.find();
+        console.log("Data fetch successfully!");
+        res.status(200).json(data);
+
+
+    } catch (err) {
+        
+        console.log(err);
+        res.status(500).json({err:'Internal error!!'})
+    }
+
+});
 
 app.listen(3000, () => {
     console.log("Hey Iam from Back-End side");
