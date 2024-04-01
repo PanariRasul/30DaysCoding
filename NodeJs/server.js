@@ -5,7 +5,7 @@ const db = require("./db");
 
 //import person
 
-const Person = require ('./models/Person');
+const Person = require('./models/Person');
 
 //import menu item
 
@@ -27,13 +27,10 @@ app.get('/', function (req, res) {
 app.post('/person', async (req, res) => {
 
     try {
-
         const data = req.body;
-
 
         // create new person document using mongoose
         const newPerson = new Person(data);
-
 
         /* insted of this directly pass data paramiter
 
@@ -50,40 +47,36 @@ app.post('/person', async (req, res) => {
         //save new person into database
 
         const response = await newPerson.save();
-
         console.log("Data saves Successfully into database");
         res.status(200).json(response);
-
     } catch (err) {
-
         console.log(err);
-        res.status(500).json({err:"Internal Error"});
+        res.status(500).json({
+            err: "Internal Error"
+        });
     }
-
 });
 
 //GET method to get person data
 
-app.get("/person", async (req, res)=>{
-
+app.get("/person", async (req, res) => {
     try {
         const data = await Person.find();
         console.log("Data fetch successfully!");
         res.status(200).json(data);
-
     } catch (err) {
-        
         console.log(err);
-        res.status(500).json({err:"Internal Error"});
+        res.status(500).json({
+            err: "Internal Error"
+        });
     }
 })
 
 //POST metod for menu item 
 
-app.post('/menu', async (req, res )=>{
+app.post('/menu', async (req, res) => {
 
     try {
-
         const menuData = req.body;
 
         // create new menu document using mongoose
@@ -94,38 +87,30 @@ app.post('/menu', async (req, res )=>{
         const data = await newMenu.save();
         console.log("Data saves Successfully into database");
         res.status(200).json(data);
-
     } catch (err) {
-        
         console.log(err);
-        res.status(500).json({err:"Internal Error"});
-
+        res.status(500).json({
+            err: "Internal Error"
+        });
     }
-
 });
 
 //GET method for menu items
 
-app.get('/menu', async (req, res)=>{
-
+app.get('/menu', async (req, res) => {
     try {
-        
         const data = await menuItem.find();
         console.log("Data fetch successfully!");
         res.status(200).json(data);
-
-
     } catch (err) {
-        
         console.log(err);
-        res.status(500).json({err:'Internal error!!'})
+        res.status(500).json({
+            err: 'Internal error!!'
+        })
     }
-
 });
 
 app.listen(3000, () => {
     console.log("Hey Iam from Back-End side");
     console.log("Server run on port 3000");
-
-
 });
