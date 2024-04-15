@@ -1,22 +1,28 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-}
-
-.navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #a5a5a5;
 }
 
 .container {
+    justify-content: space-between;
+    align-items: center;
+    max-width:100%;
+    margin: 0 auto;
+    padding:20px 0;
+}
+
+/* NAvbar Section */
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 40px;
 }
+
 
 .logo a {
     color: #fff;
@@ -28,11 +34,15 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    gap: 20px;
 }
 
 .nav-links ul li {
-    display: inline;
+    display: inline-block;
     margin-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .nav-links ul li a {
@@ -44,26 +54,25 @@ body {
     text-decoration: underline;
 }
 
+/* Hero Section */
+
 .hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: #f0f0f0;
-    padding: 100px 0;
+    padding: 40px 0;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
 
 .hero-text {
+    max-width: 35%;
     flex: 1;
 }
 
 .hero-text h1 {
     font-size: 36px;
+    font-weight: 800;
     margin-bottom: 20px;
 }
 
@@ -81,15 +90,21 @@ body {
     border-radius: 5px;
 }
 
-.hero-image img {
+.hero-image {
     max-width: 100%;
-    height: auto;
 }
 
+.hero-image img {
+    max-width: 100%;
+    height:100%;
+    border-radius: 30px;
+}
+
+/* New Innovation Section */
 
 .innovation-section {
     height: 650px;
-    background-image: url('./image 4.png');
+    background-image: url('./Images/image 4.png');
     background-size: cover;
     background-position: center;
     padding: 10px 0;
@@ -98,11 +113,6 @@ body {
     /* Text color */
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
 
 .innovation-text {
     max-width: 600px;
@@ -131,27 +141,33 @@ body {
 /* about section */
 
 .about-section {
-    padding: 100px 0;
+    padding: 40px 200px;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.about-section h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
 }
+
 
 .about-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+}
+
+.about-image {
+    height: 400px;
+    width: 300px;
+    border-radius: 130px;
+    background-color: #000;
 }
 
 .about-image img {
     max-width: 100%;
-    height: auto;
+    height:100%;
+    border-radius: 130px;
 }
 
 .about-text {
@@ -169,16 +185,16 @@ body {
     line-height: 1.6;
 }
 
-/* Images */
+/*  Saftey Images */
 
 .image-gallery {
-    padding: 50px 0;
+    padding: 50px 100px;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.image-gallery h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
 }
 
 .image-row {
@@ -193,22 +209,27 @@ body {
     /* Adjust spacing between images */
 }
 
+/* Luxury Car Section */
 
 .luxury-car-section {
-    padding: 50px 0;
+    padding: 10px 0;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.luxury-car-section h1{
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+}
+.row {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 30px;
+    margin: 20px 20px;
+    border-radius: 10px;
 }
 
 .row {
-    display: flex;
-}
-
-.row1 {
     display: flex;
 }
 
@@ -223,22 +244,22 @@ body {
 }
 
 .row img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height:250px;
+    border-radius: 10px;
+
 }
+
+/* Footer Section */
 
 .footer {
     background-color: #000;
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+
 
 
 .search-container {
@@ -251,22 +272,32 @@ body {
 }
 
 .search-bar {
+    height: 25px;
     width: 70%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
+    border:none;
+    border-radius: 50px 0 0 50px;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .search-button {
+    height: 45px;
     width: 30%;
+    font-size: 20px;
+    font-weight: 500;
     padding: 10px;
-    background-color: #007bff;
+    background-color: orangered;
     color: #fff;
     border: none;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 50px 50px 0;
     cursor: pointer;
+    transform: 1s;
 }
 
 .search-button:hover {
-    background-color: #0056b3;
+    background-color:rgb(179, 178, 178);
+    border: none;
+    transition: 1s;
+    
 }
