@@ -1,15 +1,39 @@
+/* Font Family */
+
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Prata&display=swap');
+
+/* 
+.fugaz-one-regular {
+  font-family: "Fugaz One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*/
+
+/* 
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*/
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #a5a5a5;
+    font-family: "Prata", serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #ffffff;
 }
 
 .container {
     justify-content: space-between;
     align-items: center;
-    max-width:100%;
+    max-width: 100%;
     margin: 0 auto;
-    padding:20px 0;
+    padding: 0;
 }
 
 /* NAvbar Section */
@@ -18,9 +42,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000000;
+    background-color: #393939;
     color: #fff;
     padding: 20px 40px;
+    
 }
 
 
@@ -73,6 +98,8 @@ body {
 .hero-text h1 {
     font-size: 36px;
     font-weight: 800;
+    font-family: "Fugaz One", sans-serif;
+    font-style: normal;
     margin-bottom: 20px;
 }
 
@@ -96,7 +123,7 @@ body {
 
 .hero-image img {
     max-width: 100%;
-    height:100%;
+    height: 100%;
     border-radius: 30px;
 }
 
@@ -147,7 +174,9 @@ body {
 .about-section h1 {
     text-align: center;
     font-size: 48px;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: "Fugaz One", sans-serif;
+    font-style: normal;
 }
 
 
@@ -158,25 +187,25 @@ body {
 }
 
 .about-image {
-    height: 400px;
-    width: 300px;
-    border-radius: 130px;
+    height: 532px;
+    width: 470px;
+    border-radius: 228px;
     background-color: #000;
 }
 
 .about-image img {
     max-width: 100%;
-    height:100%;
+    height: 100%;
     border-radius: 130px;
 }
 
 .about-text {
-    max-width: 600px;
+    max-width: 500px;
 }
 
 .about-text h2 {
     font-size: 36px;
-    font-weight: bold;
+    font-weight:bolder;
     margin-bottom: 20px;
 }
 
@@ -193,8 +222,11 @@ body {
 
 .image-gallery h1 {
     text-align: center;
-    font-size: 48px;
-    font-weight: 600;
+  font-size: 48px;
+    font-weight: 500; 
+    font-family: "Fugaz One", sans-serif;
+    
+    font-style: normal;
 }
 
 .image-row {
@@ -215,14 +247,17 @@ body {
     padding: 10px 0;
 }
 
-.luxury-car-section h1{
+.luxury-car-section h1 {
     text-align: center;
-    font-size: 48px;
-    font-weight: 600;
+     font-size: 48px;
+    font-weight: 500; 
+    font-family: "Fugaz One", sans-serif;
+    font-style: normal;
 }
+
 .row {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     gap: 30px;
     margin: 20px 20px;
@@ -245,7 +280,7 @@ body {
 
 .row img {
     width: 100%;
-    height:250px;
+    height: 350px;
     border-radius: 10px;
 
 }
@@ -275,7 +310,7 @@ body {
     height: 25px;
     width: 70%;
     padding: 10px;
-    border:none;
+    border: none;
     border-radius: 50px 0 0 50px;
     font-size: 20px;
     font-weight: 500;
@@ -296,8 +331,8 @@ body {
 }
 
 .search-button:hover {
-    background-color:rgb(179, 178, 178);
+    background-color: rgb(179, 178, 178);
     border: none;
     transition: 1s;
-    
+
 }
